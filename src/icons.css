@@ -1,0 +1,21 @@
+#et_search_icon:before {
+    content: none !important;
+}
+
+#et_search_icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("img/loupe.svg") center / contain no-repeat;
+}
+
+.mobile_menu_bar_toggle:before { content: none !important; }
+
+.mobile_menu_bar_toggle {
+    display: inline-block !important;
+    width: 32px !important;
+    height: 32px !important;
+    border: 0;
+    padding: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23333' d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/%3E%3C/svg%3E") center / contain no-repeat !important;
+}
