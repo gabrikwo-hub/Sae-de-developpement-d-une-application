@@ -19,3 +19,17 @@
     padding: 0;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23333' d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/%3E%3C/svg%3E") center / contain no-repeat !important;
 }
+
+#et-secondary-nav a[href^="tel"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#et-secondary-nav a[href^="tel"]:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("img/tel.svg") center / contain no-repeat;
+}
