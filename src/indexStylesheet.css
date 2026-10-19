@@ -1,0 +1,47 @@
+:root{
+    --mainOrange : rgba(255, 157, 0);
+    --lightorange : rgba(255,245,229);
+}
+
+.orangeText{
+    color: var(--mainOrange);
+}
+
+.orangeBanner{
+    background-color: var(--lightorange);
+}
+
+.buttonWhiteLayout{
+    border: 2px white solid;
+    margin : 5px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    a{
+        color: white;
+    }
+}
+
+.buttonBlackLayout{
+    border: 2px black solid;
+    background-color: white;
+    margin : 5px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    a{
+        color: black;
+    }
+}
+
+.buttonRedLayout{
+    border: 2px #AD142E solid;
+    background-color: white;
+    margin : 5px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    a{
+        color: #AD142E;
+    }
+}
