@@ -6,7 +6,7 @@
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: url("img/loupe.svg") center / contain no-repeat;
+    background: url("img/accueil/loupe.svg") center / contain no-repeat;
 }
 
 .mobile_menu_bar_toggle:before { content: none !important; }
@@ -31,5 +31,5 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    background: url("img/tel.svg") center / contain no-repeat;
+    background: url("img/accueil/tel.svg") center / contain no-repeat;
 }
