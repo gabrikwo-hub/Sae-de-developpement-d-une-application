@@ -5,7 +5,7 @@
 .footer__main { padding-block: 3rem 2rem; }
 .footer__grid {
   display: grid; gap: 2rem;
-  grid-template-columns: minmax(120px, .8fr) repeat(5, minmax(0, 1fr));
+  grid-template-columns: minmax(120px, .8fr) repeat(4, minmax(0, 1fr));
   align-items: start;
 }
 .footer__brand img { max-width: 160px; background: var(--c-yellow); padding: .6rem; border-radius: var(--radius); }
