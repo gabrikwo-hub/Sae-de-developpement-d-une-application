@@ -8,7 +8,7 @@
   grid-template-columns: minmax(120px, .8fr) repeat(4, minmax(0, 1fr));
   align-items: start;
 }
-.footer__brand img { max-width: 160px; background: var(--c-yellow); padding: .6rem; border-radius: var(--radius); }
+.footer__brand img { max-width: 160px; padding: .6rem; border-radius: var(--radius); }
 
 .footer__title {
   margin: 0 0 .75rem; font-size: 1rem; font-weight: 700;
