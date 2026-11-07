@@ -11,7 +11,7 @@
 
 /* Titre avec icône à gauche (actus, régions) */
 .title__icon { width: auto; max-height: 90px; }
-.title--with-icon { display: flow-root; line-height: 1.05; }
+.title--with-icon { display: flow-root; line-height: 1.05;}
 .title--with-icon .title__icon { float: left; margin: 0 1.5rem .25rem 0; }
 
 /* Titre avec image à gauche et à droite */
