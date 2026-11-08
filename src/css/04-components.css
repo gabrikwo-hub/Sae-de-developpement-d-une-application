@@ -19,7 +19,7 @@
 .title--ornate img { flex: 0 0 auto; width: 130px; }
 @media (max-width: 640px) { .title--ornate img { display: none; } }
 
-.lead { font-size: 1.1rem; max-width: 60ch; }
+.lead { font-size: 1.1rem; max-width: 100ch; }
 .lead--center { margin-inline: auto; text-align: center; }
 
 /* ---------- Boutons ---------- */
@@ -165,5 +165,5 @@
 
 /* ---------- Bannière de bienvenue ---------- */
 .hero { background: var(--c-yellow-soft); padding-block: clamp(3rem, 7vw, 6rem); }
-.hero .title { font-size: clamp(2rem, 1rem + 3.4vw, 3.6rem); margin-bottom: .1em; color: var(--c-ink); }
-.hero .title.text-orange { font-size: clamp(1.6rem, .8rem + 2.8vw, 2.9rem); color: var(--c-orange); }
+.hero .title { font-size: clamp(1.8rem, .09rem + 3vw, 3.3rem); margin-bottom: .1em; color: var(--c-ink); }
+.hero .title.text-orange { font-size: clamp(1.4rem, .7rem + 2.6vw, 2.6rem); color: var(--c-orange); }

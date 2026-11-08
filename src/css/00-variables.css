@@ -24,13 +24,13 @@
   --font-body:  Arial, Helvetica, "Liberation Sans", sans-serif;
   --font-title: Arial, Helvetica, "Liberation Sans", sans-serif;
 
-  --fs-base:  1rem;
-  --fs-sm:    .875rem;
-  --fs-h1:    clamp(1.7rem, 1.2rem + 1.8vw, 2.6rem);
-  --fs-h2:    clamp(1.8rem, 1.2rem + 2.4vw, 3.4rem);
-  --fs-h3:    clamp(1.2rem, 1rem + .8vw, 1.6rem);
-  --lh-body:  1.7;
-  --lh-title: 1.2;
+  --fs-base:  0.95rem;
+  --fs-sm:    .87rem;
+  --fs-h1:    clamp(1.5rem, 1rem + 1.4vw, 2.1rem);
+  --fs-h2:    clamp(1.7rem, 1rem + 2.2vw, 3.1rem);
+  --fs-h3:    clamp(1.1rem, .8rem + .6vw, 1.3rem);
+  --lh-body:  1.65;
+  --lh-title: 1.15;
 
   --container:     1360px;
   --container-pad: 12vw;

@@ -13,7 +13,7 @@
 /* ---------- Boutons du haut (téléphone, aide, adhérer, don) ---------- */
 .topbar__list { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .5rem 1.7rem; }
 .topbar__link {
-  display: block; padding: .9rem 1.25rem;
+  display: block; padding: 1rem 1rem;
   font-weight: 700; font-size: 0.9rem; line-height: 1.2; color: var(--c-ink);
   background: var(--c-orange);
   transition: background var(--ease), color var(--ease);
@@ -23,7 +23,7 @@
 /* ---------- Navigation + recherche ---------- */
 .site-header__navrow {
   display: flex; align-items: flex-start; justify-content: flex-end; gap: 1.5rem;
-  width: 100%; margin-top: 5px;
+  width: 100%; margin-top: 8px;
 }
 
 .nav__list {
@@ -43,7 +43,7 @@
   border-bottom: 4px solid var(--c-green-dark);
 }
 .nav__link__commu{
-  border-bottom: 4px solid var(--c-yellow);
+  border-bottom: 4px solid var(--c-orange);
 }
 .nav__link__droits{
   border-bottom: 4px solid var(--c-red);
@@ -59,7 +59,7 @@
 }
 
 .nav__item:hover > .nav__link,
-.nav__item:focus-within > .nav__link { color: var(--c-orange); }
+.nav__item:focus-within > .nav__link { color: var(--c-orange-dark); }
 
 /* Sous-menus */
 .subnav {
@@ -73,7 +73,7 @@
   background: var(--c-green-dark);
 }
 .subnav__yellow{
-  background: var(--c-yellow);
+  background: var(--c-orange-dark);
 }
 .subnav__red{
   background: var(--c-red);
@@ -88,7 +88,7 @@
 
 .subnav__link {
   display: block; padding: .7rem 1.4rem;
-  font-size: 1.08rem; font-weight: 400; line-height: 1.4; color: var(--c-white);
+  font-size: 1.08rem; font-weight: 700; line-height: 1.4; color: var(--c-white);
 }
 .subnav__link:hover, .subnav__link:focus-visible { background: var(--c-yellow-soft); color: var(--c-orange-dark); }
 
@@ -168,6 +168,25 @@
   .nav__item.is-open:hover > .subnav { display: block; }
   .nav__item:nth-last-child(-n+3) > .subnav { right: auto; }
   .subnav__item--has-sub > .subnav__link::after { content: "+"; }
+
+  .nav__link__asso{
+    border-bottom: 4px solid var(--c-green-dark);
+  }
+  .nav__link__commu{
+    border-bottom: 4px solid var(--c-orange);
+  }
+  .nav__link__droits{
+    border-bottom: 4px solid var(--c-red);
+  }
+  .nav__link__amputation{
+    border-bottom: 4px solid var(--c-blue);
+  }
+  .nav__link__actus{
+    border-bottom: 4px solid var(--c-green);
+  }
+  .nav__link__others{
+    border-bottom: 4px solid var(--c-yellow);
+  }
 }
 @media (max-width: 640px) {
   .topbar__link--phone { display: none; }
