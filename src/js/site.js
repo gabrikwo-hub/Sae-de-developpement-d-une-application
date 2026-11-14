@@ -14,7 +14,7 @@
     // Accordéon des sous-menus en mobile
     $$('.nav__item--has-sub > .nav__link, .subnav__item--has-sub > .subnav__link', nav).forEach(function (link) {
       link.addEventListener('click', function (e) {
-        if (window.matchMedia('(max-width: 980px)').matches) {
+        if (window.matchMedia('(max-width: 1100px)').matches) {
           var li = link.parentElement;
           if (!li.classList.contains('is-open')) { e.preventDefault(); }
           li.classList.toggle('is-open');

@@ -8,6 +8,7 @@
 .title--green  { color: var(--c-green); }
 .title--yellow, .title--orange { color: var(--c-orange); }
 .title--light  { color: var(--c-green-light); }
+.title--black {color: black;}
 
 /* Titre avec icône à gauche (actus, régions) */
 .title__icon { width: auto; max-height: 90px; }
@@ -166,4 +167,4 @@
 /* ---------- Bannière de bienvenue ---------- */
 .hero { background: var(--c-yellow-soft); padding-block: clamp(3rem, 7vw, 6rem); }
 .hero .title { font-size: clamp(1.8rem, .09rem + 3vw, 3.3rem); margin-bottom: .1em; color: var(--c-ink); }
-.hero .title.text-orange { font-size: clamp(1.4rem, .7rem + 2.6vw, 2.6rem); color: var(--c-orange); }
+.hero .title.text-orange { font-size: clamp(1.5rem, .8rem + 2.8vw, 2.7rem); color: var(--c-orange); }
