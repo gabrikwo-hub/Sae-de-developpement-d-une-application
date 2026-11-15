@@ -21,6 +21,11 @@
 .lead { font-size: 1.1rem; max-width: 100ch; }
 .lead--center { margin-inline: auto; text-align: center; }
 
+/* ---------- Bannière de bienvenue ---------- */
+.hero { background: var(--c-yellow-soft); padding-block: clamp(3rem, 7vw, 6rem); }
+.hero .title { font-size: clamp(1.8rem, .09rem + 3vw, 3.3rem); margin-bottom: .1em; color: var(--c-ink); }
+.hero .title.text-orange { font-size: clamp(1.5rem, .8rem + 2.8vw, 2.7rem); color: var(--c-orange); }
+
 /* ---------- Boutons ---------- */
 .btn {
   display: inline-block; padding: .7rem 1.1rem;

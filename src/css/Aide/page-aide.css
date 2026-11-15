@@ -1,0 +1,14 @@
+/* Styles spécifiques à la page J'ai besoin d'aide */
+.page-aide .banner {
+    padding-top: 0;
+}
+
+.page-aide .lead ul {
+    margin: 1.25rem auto 0;
+    padding-left: 1.5rem;
+    max-width: 72ch;
+    list-style: disc;
+    text-align: left;
+    display: grid;
+    gap: 0.75rem;
+}
