@@ -5,10 +5,14 @@
 .footer__main { padding-block: 3rem 2rem; }
 .footer__grid {
   display: grid; gap: 2rem;
-  grid-template-columns: minmax(120px, .8fr) repeat(5, minmax(0, 1fr));
+  grid-template-columns: minmax(120px, .8fr) repeat(var(--footer-cols, 4), minmax(0, 1fr));
   align-items: start;
 }
-.footer__brand img { max-width: 160px; background: var(--c-yellow); padding: .6rem; border-radius: var(--radius); }
+/* Variante à 5 colonnes utilisée sur Nos actions */
+.footer__grid--5cols { --footer-cols: 5; }
+
+.footer__brand img { max-width: 160px; padding: .6rem; border-radius: var(--radius); }
+.footer__brand--yellow img { background: var(--c-yellow); }
 
 .footer__title {
   margin: 0 0 .75rem; font-size: 1rem; font-weight: 700;

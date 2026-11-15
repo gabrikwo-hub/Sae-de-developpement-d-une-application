@@ -1,0 +1,6 @@
+.news {
+    background-color: var(--c-white);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1860 600' preserveAspectRatio='none' fill='none' stroke-width='5'%3E%3Cg style='vector-effect:non-scaling-stroke'%3E%3Cpath vector-effect='non-scaling-stroke' stroke='%23ff9d00' d='M0 300C60 292 190 300 264 330M1614 205C1700 200 1790 200 1860 198'/%3E%3Cpath vector-effect='non-scaling-stroke' stroke='%232563e8' d='M0 360C60 380 190 420 264 460M1614 418C1700 425 1790 425 1860 430'/%3E%3Cpath vector-effect='non-scaling-stroke' stroke='%23006f55' d='M0 435C90 425 190 430 264 450M1614 345C1700 340 1790 342 1860 340'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,115 @@
+.formulaire {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 56px 56px 96px;
+    background: var(--c-green-soft);
+}
+
+.formulaire .grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 17px;
+    row-gap: 24px;
+}
+
+.formulaire .champ { display: flex; flex-direction: column; }
+.formulaire .champ.pleine-largeur { grid-column: 1 / -1; }
+
+.formulaire label {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--c-ink);
+}
+
+.formulaire input[type="text"],
+.formulaire input[type="email"],
+.formulaire input[type="tel"],
+.formulaire textarea {
+    width: 100%;
+    padding: 0 12px;
+    height: 46px;
+    background: var(--c-white);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font: inherit;
+    font-size: 17px;
+    color: var(--c-ink);
+}
+
+.formulaire textarea {
+    height: 128px;
+    padding-top: 12px;
+    resize: vertical;
+}
+
+.formulaire ::placeholder { color: var(--c-placeholder); opacity: 1; }
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+    outline: 2px solid var(--c-green);
+    outline-offset: 0;
+}
+
+.formulaire .invalide { border-color: var(--c-red) !important; }
+
+.formulaire .erreur {
+    min-height: 0;
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--c-red);
+}
+
+.formulaire .consentement {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    font-size: 18px;
+}
+
+.formulaire .consentement input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: var(--c-green);
+}
+
+.formulaire .consentement label {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.formulaire button[type="submit"] {
+    margin-top: 32px;
+    padding: 0 46px;
+    height: 46px;
+    background: var(--c-green);
+    color: var(--c-white);
+    border: 0;
+    border-radius: 3px;
+    font: inherit;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background var(--ease);
+}
+
+.formulaire button[type="submit"]:hover { background: var(--c-green-dark); }
+.formulaire button[type="submit"]:focus-visible { outline: 3px solid var(--c-ink); outline-offset: 2px; }
+
+.formulaire .statut {
+    margin-top: 16px;
+    font-size: 17px;
+    color: var(--c-green);
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .formulaire { padding: 32px 20px 48px; }
+    .formulaire .grille { grid-template-columns: 1fr; }
+    .formulaire label { font-size: 18px; }
+    .formulaire .consentement { align-items: flex-start; font-size: 16px; }
+}
