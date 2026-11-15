@@ -1,0 +1,51 @@
+:root {
+  --c-orange:        #ff9d00;
+  --c-orange-dark: #c87902;
+  --c-yellow:        #ff9d00;
+  --c-yellow-dark:   #ff9d00;
+  --c-yellow-soft:   #fdf3e3;
+  --c-green:         #006f55;
+  --c-green-dark:    #00513f;
+  --c-green-light:   #93e064;
+  --c-blue:          #2563e8;
+  --c-blue-soft:     #e8f1fa;
+  --c-red:           #a8132f;
+  --c-red-dark:      #850e24;
+  --c-ink:           #000000;
+  --c-ink-soft:      #222222;
+  --c-text:          #222222;
+  --c-muted:         #6b737b;
+  --c-line:          #dfe3e7;
+  --c-bg:            #ffffff;
+  --c-bg-alt:        #f3f5f7;
+  --c-white:         #ffffff;
+  --c-lime:          #93e064;
+
+  --font-body:  Arial, Helvetica, "Liberation Sans", sans-serif;
+  --font-title: Arial, Helvetica, "Liberation Sans", sans-serif;
+
+  --fs-base:  1rem;
+  --fs-sm:    .875rem;
+  --fs-h1:    clamp(1.7rem, 1.2rem + 1.8vw, 2.6rem);
+  --fs-h2:    clamp(1.8rem, 1.2rem + 2.4vw, 3.4rem);
+  --fs-h3:    clamp(1.2rem, 1rem + .8vw, 1.6rem);
+  --lh-body:  1.7;
+  --lh-title: 1.2;
+
+  --container:     1360px;
+  --container-pad: 12vw;
+  --gap:           2rem;
+  --gap-sm:        1rem;
+  --section-y:     clamp(2.5rem, 5vw, 4.5rem);
+  --header-h:      250px;
+  --topbar-h:      40px;
+
+  --radius:    0;
+  --radius-lg: 0;
+  --shadow:    none;
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.18);
+  --ease:      .25s ease;
+
+  --bp-tablet: 980px;
+  --bp-mobile: 640px;
+}
