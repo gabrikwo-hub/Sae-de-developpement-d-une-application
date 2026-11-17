@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Page spécifique : Recherche et études
+   ========================================================================== */
+
+/* ---------- Bannière d'en-tête avec filet vert et encadré blanc ---------- */
+.page-hero {
+    background: url("../img/fond-trait.png") top center / 100% 50% no-repeat;
+}
+
+.page-hero__banner {
+    background: url("../../img/recherches-etudes/background-recherches.jpg") center / cover no-repeat;
+    padding: clamp(10rem, 22vw, 18rem) clamp(1rem, 6vw, 6rem) 0;
+}
+
+.page-hero__card {
+    background: var(--c-white);
+    padding: 2.5rem 2rem 1.5rem;
+    text-align: center;
+}
+
+.page-hero__card .title {
+    margin-bottom: 1.5rem;
+}
+
+.page-hero__icon {
+    margin-inline: auto;
+}
+
+/* ---------- Texte d'introduction ---------- */
+.research-intro {
+    color: var(--c-green);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ---------- Variante orange et vignette sur les cartes d'articles ---------- */
+.post-card--orange {
+    --card-accent: var(--c-orange);
+}
+
+.post-card--with-media {
+    display: grid;
+    grid-template-columns: minmax(180px, 260px) 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.post-card__media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    .post-card--with-media {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Encart "Pourquoi adhérer à l'ADEPA ?" ---------- */
+.adherer-box {
+    background: var(--c-green-soft) url("../img/motif-adherer.png") right -25% bottom -75% no-repeat;
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.adherer-box__statuts {
+    color: var(--c-blue);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.btn--outline-dark {
+    background: var(--c-white);
+    border-color: var(--c-ink);
+    color: var(--c-ink);
+    margin-top: .5rem;
+}
+
+.btn--outline-dark:hover,
+.btn--outline-dark:focus-visible {
+    background: var(--c-ink);
+    color: var(--c-white);
+}
