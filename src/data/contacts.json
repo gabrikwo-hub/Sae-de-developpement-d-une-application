@@ -1,0 +1,224 @@
+[
+  {
+    "name": "Alexandrine Girardi",
+    "region": "Haute-Garonne",
+    "phone": "06 24 46 29 82",
+    "img": "src/img/contact/Alexandrine-Girardi-Contact.png"
+  },
+  {
+    "name": "Annie Pélissier",
+    "region": "Morbihan",
+    "phone": "06 14 90 38 38",
+    "img": "src/img/contact/Pelissier-Annie-Contact-480x480.png"
+  },
+  {
+    "name": "Bernard Chardiny",
+    "region": "Isère",
+    "phone": "06 62 98 76 01",
+    "img": "src/img/contact/Bernard-Chardiny-Contact-480x480.png"
+  },
+  {
+    "name": "Camille Devaux",
+    "region": "Eure-et-Loir",
+    "phone": "06 49 76 53 37",
+    "img": "src/img/contact/visage-femme-picasso-480x484.png"
+  },
+  {
+    "name": "Catherine Ory",
+    "region": "Essonne",
+    "phone": "06 50 96 55 28",
+    "img": "src/img/contact/Contact-Catherine-Ory-480x480.png"
+  },
+  {
+    "name": "Charles Debrieuvre",
+    "region": "Corrèze",
+    "phone": "07 83 29 70 18",
+    "img": "src/img/contact/Charles-Debieuvre-Contact-480x480.png"
+  },
+  {
+    "name": "Christophe Rihouey",
+    "region": "Seine-Maritime",
+    "phone": "06 31 04 94 06",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Damien Denolly",
+    "region": "Isère",
+    "phone": "04 74 16 09 01",
+    "img": "src/img/contact/Damien-Denolly-Contact-480x480.png"
+  },
+  {
+    "name": "David Gauthier",
+    "region": "Haut-Rhin",
+    "phone": "06 98 87 61 82",
+    "img": "src/img/contact/Contact-david-Gauthier-480x480.png"
+  },
+  {
+    "name": "Didier Lamarche",
+    "region": "Maine-et-Loire",
+    "phone": "06 42 73 75 58",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Éric Dubois",
+    "region": "Seine-Maritime",
+    "phone": "06 31 13 72 59",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Francesca Demarck",
+    "region": "Corse-du-Sud",
+    "phone": "07 63 95 06 73",
+    "img": "src/img/contact/Contact-Francesca-Demarck-480x480.png"
+  },
+  {
+    "name": "Gérard Mandon",
+    "region": "Allier, Haute-Loire, Loire",
+    "phone": "06 07 62 27 33",
+    "img": "src/img/contact/Contact-Gerard-Mandon-480x480.png"
+  },
+  {
+    "name": "Guillaume Augeard",
+    "region": "Seine-Maritime",
+    "phone": "06 58 29 95 61",
+    "img": "src/img/contact/Guillaume-Augeard-480x480.png"
+  },
+  {
+    "name": "Guillaume Begoud",
+    "region": "Meurthe-et-Moselle",
+    "phone": "06 99 22 30 44",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Jean-Claude Cluzel",
+    "region": "Haute-Savoie, Savoie",
+    "phone": "06 68 70 47 91",
+    "img": "src/img/contact/Jean-Claude-Cluzel-contact-480x480.png"
+  },
+  {
+    "name": "Jean-Marc Wittmer",
+    "region": "Rhône",
+    "phone": "06 81 21 79 96",
+    "img": "src/img/contact/Jean-Marc-Wittmer-Contact-480x480.png"
+  },
+  {
+    "name": "Jean-Michel Triquet",
+    "region": "Nord",
+    "phone": "06 45 11 94 54",
+    "img": "src/img/contact/Triquet-Jean-Michel-scaled-modified-2-480x480.png"
+  },
+  {
+    "name": "Juan Heutte",
+    "region": "Eure-et-Loir",
+    "phone": "07 48 65 28 80",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Laurence Chaniac",
+    "region": "Drôme",
+    "phone": "06 23 74 17 22",
+    "img": "src/img/contact/Laurence-Chaniac-contact--480x480.png"
+  },
+  {
+    "name": "Livia Cigar",
+    "region": "Guadeloupe",
+    "phone": "+590 690 42 07 20",
+    "img": "src/img/contact/Contact-Livia-Cigar-480x480.png"
+  },
+  {
+    "name": "Marco Fontana",
+    "region": "Suisse Romande",
+    "phone": "+41 79 769 1765",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Marie Moreau",
+    "region": "Alpes-Maritimes",
+    "phone": "06 82 35 54 10",
+    "img": "src/img/contact/marie-moreau2-480x474.png"
+  },
+  {
+    "name": "Nicolas de Rauglaudre",
+    "region": "Isère",
+    "phone": "06 79 26 32 26",
+    "img": "src/img/contact/Nicolas-de-Rauglaudre-Contact-2-480x480.png"
+  },
+  {
+    "name": "Olga Duconseille",
+    "region": "Eure",
+    "phone": "07 60 58 45 08",
+    "img": "src/img/contact/visage-femme-picasso-480x484.png"
+  },
+  {
+    "name": "Pascal Coulongeat",
+    "region": "Limousin",
+    "phone": "06 80 77 77 22",
+    "img": "src/img/contact/Coulongeat-Pascal-contact-modified-480x480.png"
+  },
+  {
+    "name": "Patrice Barattero",
+    "region": "Alpes-Maritimes",
+    "phone": "06 63 73 34 96",
+    "img": "src/img/contact/Patrice-Barattero-Contact-480x480.png"
+  },
+  {
+    "name": "Patrice Gorse",
+    "region": "Alpes-Maritimes",
+    "phone": "06 62 43 68 53",
+    "img": "src/img/contact/Gorse-Patrick-Contact-480x480.png"
+  },
+  {
+    "name": "Patrick Duval",
+    "region": "Manche",
+    "phone": "06 24 91 00 34",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Patrick Ruel",
+    "region": "Haute-Loire",
+    "phone": "06 87 64 79 85",
+    "img": "src/img/contact/Ruel-patrick-contact-modified-copie-480x480.png"
+  },
+  {
+    "name": "Philippe Louzeau",
+    "region": "Rhône",
+    "phone": "06 18 10 41 53",
+    "img": "src/img/contact/Louzeau-philippe-2-modified-2-480x480.png"
+  },
+  {
+    "name": "Richard Gobert",
+    "region": "Ain",
+    "phone": "06 76 64 99 07",
+    "img": "src/img/contact/Richard-Gobert-contact-480x480.png"
+  },
+  {
+    "name": "Sébastien Racine",
+    "region": "Territoire de Belfort",
+    "phone": "06 77 22 18 52",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Serge Grand",
+    "region": "Puy-de-Dôme",
+    "phone": "06 66 02 03 96",
+    "img": "src/img/contact/serge-grand-480x480.png"
+  },
+  {
+    "name": "Stéphane Caffaro",
+    "region": "Martinique",
+    "phone": "07 80 52 63 47",
+    "img": "src/img/contact/Stephane-Caffaro-Contact-2-480x456.png"
+  },
+  {
+    "name": "Stéphane Ponsart",
+    "region": "Côtes-d'Or",
+    "phone": "06 98 17 51 30",
+    "img": "src/img/contact/vangogh-480x478.png"
+  },
+  {
+    "name": "Vincent Noirbusson",
+    "region": "Loire Atlantique",
+    "phone": "06 43 07 95 03",
+    "img": "src/img/contact/Vincent_NOIRBUSSON-480x482.png"
+  }
+]

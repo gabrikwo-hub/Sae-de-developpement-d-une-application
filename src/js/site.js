@@ -5,14 +5,14 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
   /* Menu mobile */
-  var toggle = $('.menu-toggle'), nav = $('#main-nav');
+  var toggle = $('.menu-toggle'), nav = $('#main-nav ') , con = $('region-filter');
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open);
     });
     // Accordéon des sous-menus en mobile
-    $$('.nav__item--has-sub > .nav__link, .subnav__item--has-sub > .subnav__link', nav).forEach(function (link) {
+$$('#main-nav .nav__item--has-sub > .nav__link, .region-filter .nav__item--has-sub > .nav__link').forEach(function (link) {
       link.addEventListener('click', function (e) {
         if (window.matchMedia('(max-width: 980px)').matches) {
           var li = link.parentElement;
