@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Page spécifique : Recherche et études
+   ========================================================================== */
+
+/* ---------- Bannière d'en-tête avec filet vert et encadré blanc ---------- */
+.page-hero {
+    background: url("../img/fond-trait.png") top center / 100% 50% no-repeat;
+}
+
+.page-hero__banner {
+    background: url("../../img/recherches-etudes/background-recherches.jpg") center / cover no-repeat;
+    padding: clamp(10rem, 22vw, 18rem) clamp(1rem, 6vw, 6rem) 0;
+}
+
+.page-hero__card {
+    background: var(--c-white);
+    padding: 2.5rem 2rem 1.5rem;
+    text-align: center;
+}
+
+.page-hero__card .title {
+    margin-bottom: 1.5rem;
+}
+
+.page-hero__icon {
+    margin-inline: auto;
+}
+
+/* ---------- Texte d'introduction ---------- */
+.research-intro {
+    color: var(--c-green);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ---------- Variante orange et vignette sur les cartes d'articles ---------- */
+.post-card--orange {
+    --card-accent: var(--c-orange);
+}
+
+.post-card--with-media {
+    display: grid;
+    grid-template-columns: minmax(180px, 260px) 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.post-card__media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    .post-card--with-media {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Encart "Pourquoi adhérer à l'ADEPA ?" ---------- */
+.adherer-box {
+    background: var(--c-green-soft) url("../img/motif-adherer.png") right -25% bottom -75% no-repeat;
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.adherer-box__statuts {
+    color: var(--c-blue);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.btn--outline-dark {
+    background: var(--c-white);
+    border-color: var(--c-ink);
+    color: var(--c-ink);
+    margin-top: .5rem;
+}
+
+.btn--outline-dark:hover,
+.btn--outline-dark:focus-visible {
+    background: var(--c-ink);
+    color: var(--c-white);
+}
+/* ---------- Barre de recherche des études et documents ---------- */
+.research-toolbar {
+    display: grid;
+    grid-template-columns: 1fr minmax(190px, 230px);
+    gap: 1rem;
+    background: var(--c-green-soft);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.research-toolbar__field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.research-toolbar__icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--c-green);
+    pointer-events: none;
+}
+
+.research-toolbar__input {
+    width: 100%;
+    padding: .8rem 2.75rem .8rem 2.85rem;
+    font: inherit;
+    font-weight: 600;
+    color: var(--c-ink);
+    background: var(--c-white);
+    border: 2px solid var(--c-ink);
+    border-radius: var(--radius);
+    transition: border-color var(--ease);
+}
+
+.research-toolbar__input::placeholder {
+    font-weight: 400;
+    color: var(--c-placeholder);
+}
+
+.research-toolbar__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.research-toolbar__input:focus {
+    border-color: var(--c-green);
+}
+
+.research-toolbar__clear {
+    position: absolute;
+    right: .5rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    background: transparent;
+    color: var(--c-ink);
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.research-toolbar__clear:hover {
+    color: var(--c-green);
+}
+
+.research-status {
+    margin-bottom: 1.25rem;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--c-green);
+}
+
+.research-empty {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: var(--c-green-soft);
+}
+
+.research-empty p {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .research-toolbar {
+        grid-template-columns: 1fr;
+    }
+}

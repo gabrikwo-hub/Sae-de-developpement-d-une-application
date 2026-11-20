@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche et études – ADEPA</title>
+    <meta name="description" content="Recherche de personnes à inclure dans des protocoles, évaluation de matériels pour l'HAS, participer à la recherche est une mission d'ADEPA">
+
+    <!-- Tes feuilles de style existantes (inchangées) -->
+    <link rel="stylesheet" href="src/css/00-variables.css">
+    <link rel="stylesheet" href="src/css/01-base.css">
+    <link rel="stylesheet" href="src/css/02-layout.css">
+    <link rel="stylesheet" href="src/css/03-header.css">
+    <link rel="stylesheet" href="src/css/04-components.css">
+    <link rel="stylesheet" href="src/css/05-footer.css">
+    <!-- Feuille de style et script spécifiques à cette page -->
+    <link rel="stylesheet" href="src/css/recherches-etudes/page-recherche.css">
+    <script src="src/js/site.js" defer></script>
+    <script src="src/js/filter.js" defer></script>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="logo" href="index.html">
+            <img class="logo__img" src="src/img/logoAdepa.png" width="554" height="448" alt="ADEPA">
+        </a>
+
+        <div class="site-header__right">
+
+            <!-- Boutons du haut -->
+            <div class="topbar">
+                <ul class="topbar__list">
+                    <li><a class="topbar__link topbar__link--phone" href="tel:0770002855">07 70 00 28 55</a></li>
+                    <li><a class="topbar__link" href="aide.html" title="J'ai besoin d'aide">J’ai besoin d’aide</a></li>
+                    <li><a class="topbar__link" href="https://www.adepa.fr/adherer-a-ladepa/" title="Adherer à ADEPA">Adhérer à l’ADEPA</a></li>
+                    <li><a class="topbar__link" href="https://adepa.frama.space/s/kzT5PXMxzCTtH7k/authenticate/showshare" title="Espace adhérent">Espace adhérent</a></li>
+                    <li><a class="topbar__link" href="https://www.adepa.fr/faire-un-don/" title="Faire un don à ADEPA">Faire un don</a></li>
+                </ul>
+            </div>
+
+            <div class="site-header__navrow">
+                <nav class="nav" id="main-nav" aria-label="Navigation principale">
+                    <ul class="nav__list">
+
+                        <li class="nav__item nav__item--has-sub">
+                            <a class="nav__link nav__link__asso" href="https://www.adepa.fr/lassociation/">L’association</a>
+                            <ul class="subnav subnav__darkgreen">
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/qui-sommes-nous/" title="Qui sommes nous">Qui sommes-nous ?</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="nos_actions.html" title="Nos actions">Nos actions</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/les-commissions/" title="Les commissions">Les commissions</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/vos-contacts-en-region/" title="Contacts en région">Vos contacts en région</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/adepa-soutien-dans-les-centres-apres-lamputation/" title="Notre présence en centes">Présence en centres de rééducation</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="recherche_et_étude.html" title="Recherches et etudes">Recherche et études</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/livre-dor/" title="Livre d'or">Livre d’or</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav__item nav__item--has-sub">
+                            <a class="nav__link nav__link__commu" href="https://www.adepa.fr/la-communaute/">La communauté</a>
+                            <ul class="subnav subnav__yellow">
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/adherer-a-ladepa/" title="Adherer à ADEPA">Adhérer à l’ADEPA</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/adherer-a-ladepa-avantages/" title="Avantages de l'adhesion">Avantages de l’adhésion à l’ADEPA</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/faire-un-don/" title="Faire un don">Faire un don</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/associations-groupes-sur-les-reseaux-sociaux/" title="Associations et groupes">Associations et groupes sur les réseaux sociaux</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/agenda/" title="Agenda">Agenda</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/boutique-adepa/" title="Boutique">La boutique</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/location-materiel-adepa/" title="Location matériel">Location de matériel</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/bons-plans-entre-amputes/" title="Bons plans">Bons plans entre amputés</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://adepa.forumactif.com/forum">FORUM</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav__item nav__item--has-sub">
+                            <a class="nav__link nav__link__droits" href="https://www.adepa.fr/vos-droits/" title="Vos droits">Vos droits</a>
+                            <ul class="subnav subnav__red">
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/le-cadre-legislatif/" title="Cadre législatif">Le cadre législatif</a></li>
+                                <li class="subnav__item subnav__item--has-sub">
+                                    <a class="subnav__link" href="https://www.adepa.fr/mdph" title="MDPH et MDA">MDPH et MDA</a>
+                                    <ul class="subnav subnav__red">
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/defense_droits/mdph/les-roles-des-mdph/" title="Le rôle des MDPH">Le rôle des MDPH</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/ressources-et-allocations/" title="Ressources et allocations">Ressources et allocations</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/la-carte-mobilite-inclusion/" title="Carte mobilité inclusion">La carte mobilité inclusion</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/defense_droits/mdph/la-reconnaissance-de-la-qualite-travailleur-handicape-rqth/" title="RQTH">La reconnaissance de la qualité de travailleur handicapé (RQTH)</a></li>
+                                    </ul>
+                                </li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/demarches-en-cas-daccident/" title="Demarches en cas d'accident">Démarches en cas d’accident</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/faire-reconnaitre-les-prejudices/" title="Reconnaitre préjudices">Faire reconnaître les préjudices</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/defense_droits/permis-de-conduire/" title="Permis de conduire">Amputation &amp; permis de conduire</a></li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/fiscalite/" title="Fiscalité">Fiscalité</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav__item nav__item--has-sub">
+                            <a class="nav__link nav__link__amputation" href="" title="Amputation">L’amputation</a>
+                            <ul class="subnav subnav__blue">
+                                <li class="subnav__item subnav__item--has-sub">
+                                    <a class="subnav__link" href="https://www.adepa.fr/autour-de-lamputation/" title="Comprendre">Comprendre l’amputation</a>
+                                    <ul class="subnav subnav__blue">
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/autour-de-lamputation/les-causes-damputation/" title="Les causes">Les causes d’amputation</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/autour-de-lamputation/impacts-psychologiques/" title="Impacts psychologiques">Les impacts psychologiques</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/autour-de-lamputation/les-amputations-du-membre-inferieur/" title="Amputations du membre inférieur">Les amputations du membre inférieur</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/autour-de-lamputation/les-amputations-du-membre-superieur/" title="Amputations du membre supérieur">Les amputations du membre supérieur</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/autour-de-lamputation/les-problemes-de-peau/" title="Les problèmes de peaux">Les problèmes de peau</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/autour-de-lamputation/les-douleurs-du-membre-fantome/" title="Douleurs fantômes">Les douleurs du membre fantôme</a></li>
+                                    </ul>
+                                </li>
+                                <li class="subnav__item subnav__item--has-sub">
+                                    <a class="subnav__link" href="https://www.adepa.fr/protheses/" title="Prothèse, c'est quoi?">Une prothèse c’est quoi ?</a>
+                                    <ul class="subnav subnav__blue">
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/protheses/la-prothese/" title="Prothèse">La prothèse</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/protheses/les-protheses-membre-inferieur/" title="Prothèses membres inférieurs">Les prothèses de membres inférieurs</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/protheses/les-protheses-membre-superieur/" title="Prothèses membres supérieurs">Les prothèses de membres supérieurs</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.ufop-ortho.fr/annuaire-des-membres/?location=12%20All.%20Louis%20Armand,%2018000%20Bourges,%20France&radius=9999" title="Trouver orthoprothesiste">Trouver un orthoprothésiste</a></li>
+                                    </ul>
+                                </li>
+                                <li class="subnav__item subnav__item--has-sub">
+                                    <a class="subnav__link" href="https://www.adepa.fr/sports-adaptes/" title="Sports adaptés aux amputés">Les sports adaptés aux amputés</a>
+                                    <ul class="subnav subnav__blue">
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/sports-adaptes/les-sports-collectifs/" title="Sports collectifs">Les sports collectifs</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/sports-adaptes/les-sports-deau/" title="Sports d'eau">Les sports d’eau</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/sports-adaptes/les-sports-de-glisse/" title="Sports de glisse">Les sports de glisse</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/sports-adaptes/velo-moto/" title="Vélo Moto">Vélo – Moto</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/sports-adaptes/athletisme/" title="Athletisme">Athlétisme</a></li>
+                                        <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/sports-adaptes/autres-sports/" title="Autres sports">Autres sports</a></li>
+                                    </ul>
+                                </li>
+                                <li class="subnav__item"><a class="subnav__link" href="https://www.adepa.fr/videos_didactiques/" title="Videos didactiques">Vidéos didactiques</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav__item"><a class="nav__link nav__link__actus" href="https://www.adepa.fr/actualites/" title="Actualités">Actualités</a></li>
+                        <li class="nav__item"><a class="nav__link nav__link__others" href="https://www.adepa.fr/le-mag-adepa/" title="Les magazines">Les magazines</a></li>
+                        <li class="nav__item"><a class="nav__link nav__link__others" href="https://www.adepa.fr/nous-contacter/" title="Nous contacter">Nous contacter</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button type="button" class="icon-btn search-toggle" aria-label="Ouvrir la recherche">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M21 21l-6-6"/></svg>
+                    </button>
+                    <button type="button" class="icon-btn menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+                        <span class="menu-toggle__bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panneau de recherche -->
+    <div class="search-panel">
+        <div class="container search-panel__inner">
+            <form class="search-panel__form" role="search" method="get" action="https://www.adepa.fr/">
+                <label class="sr-only" for="site-search">Rechercher</label>
+                <input class="search-panel__input" id="site-search" type="search" name="s" placeholder="Rechercher …" title="Rechercher :">
+            </form>
+            <button type="button" class="icon-btn search-panel__close" aria-label="Fermer la recherche">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== CONTENU PRINCIPAL ==================== -->
+<main>
+
+    <!-- 1. Bannière + Titre -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero__banner">
+                <div class="page-hero__card">
+                    <h1 class="title title--green title--center">
+                        Recherche<span class="title__accent">et études</span>
+                    </h1>
+                    <img class="page-hero__icon" src="src/img/fleure.png" alt="" width="79" height="91">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Texte d'introduction -->
+    <section class="section section--tight section--white">
+        <div class="container">
+            <p class="lead lead--center research-intro">
+                Nous partageons ici des ressources en lien avec l’amputation, le handicap, l’entraide entre pairs… Car les études et recherches continuent à contribuer à améliorer notre quotidien de personnes amputées. Certains articles écrits par des étudiants et chercheurs ont été le fruit d’une coopération avec ADEPA.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. Liste des études et documents -->
+    <section class="section section--flush-top section--white" aria-label="Publications et études">
+        <div class="container">
+
+            <!-- Barre de recherche et filtre par année -->
+            <div class="research-toolbar" role="search" aria-label="Rechercher parmi les études et documents">
+                <div class="research-toolbar__field">
+                    <label class="sr-only" for="research-input">Rechercher un document</label>
+                    <svg class="research-toolbar__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="10" cy="10" r="7"/>
+                        <path d="M21 21l-6-6"/>
+                    </svg>
+                    <input
+                            type="search"
+                            id="research-input"
+                            class="research-toolbar__input"
+                            placeholder="Rechercher un thème, un mot-clé, un auteur (ex. marche, prothèse, APADIP…)"
+                            autocomplete="off"
+                    >
+                    <button type="button" class="research-toolbar__clear" id="research-clear" aria-label="Effacer la recherche" hidden>
+                        &times;
+                    </button>
+                </div>
+
+                <div class="filter research-toolbar__filter">
+                    <label class="sr-only" for="research-year">Filtrer par année</label>
+                    <select id="research-year" class="filter__select">
+                        <option value="">Toutes les années</option>
+                    </select>
+                </div>
+            </div>
+
+            <p class="research-status" id="research-status" aria-live="polite"></p>
+
+            <div class="post-list">
+
+                <article class="post-card post-card--blue post-card--with-media">
+                    <a href="https://www.adepa.fr/document-apadip-2024/" class="post-card__media">
+                        <img src="src/img/recherches-etudes/livret-apadip-2024.png" alt="Couverture du livret Document APADIP 2024" width="1080" height="675">
+                    </a>
+                    <div class="post-card__body">
+                        <h2 class="post-card__title"><a href="document-apadip-2024.html">Document APADIP 2024</a></h2>
+                        <p class="post-card__meta"><time datetime="2024-11-14">14/11/2024</time></p>
+                        <p class="post-card__excerpt">Rapport APADIP 2024 (abandon et appropriation des prothèses) disponible en format PDF. Rédigé par une équipe composée de Paul Groud, Valentine Gourinat et Lucie Dalibert, chercheurs universitaires et collaborateurs d’ADEPA, le rapport scientifique APADIP est…</p>
+                        <a href="document-apadip-2024.html" class="post-card__more">lire plus</a>
+                    </div>
+                </article>
+
+                <article class="post-card post-card--green">
+                    <h2 class="post-card__title"><a href="memoire-ergotherapie-sport.html">Mémoire Apport de l’Ergothérapie dans le Sport</a></h2>
+                    <p class="post-card__meta"><time datetime="2022-09-15">15/09/2022</time></p>
+                    <p class="post-card__excerpt">Typhaine Sonnet a réalisé son mémoire de fin d’étude sur l’accompagnement de l’ergothérapeute vers l’activité sportive signifiante de la personne amputée : un atout de résilience.</p>
+                    <a href="https://dumas.ccsd.cnrs.fr/dumas-04129357" class="post-card__more">lire plus</a>
+                </article>
+
+                <article class="post-card post-card--orange">
+                    <h2 class="post-card__title"><a href="etude-douleur-fantome.html">Étude sur la douleur fantôme</a></h2>
+                    <p class="post-card__meta"><time datetime="2018-11-27">27/11/2018</time></p>
+                    <p class="post-card__excerpt">Une étude pourrait expliquer l’origine de la douleur du membre fantôme. Une récente étude s’est penchée sur les raisons de la douleur du membre fantôme, phénomène pour lequel les médecins n’ont à ce jour pas d’explication certaine. Il provoque chez 90 % des patients…</p>
+                    <a href="https://www.adepa.fr/etude-sur-la-douleur-fantome/" class="post-card__more">lire plus</a>
+                </article>
+
+                <article class="post-card post-card--orange">
+                    <h2 class="post-card__title"><a href="projet-graal.html">Projet GRAAL</a></h2>
+                    <p class="post-card__meta"><time datetime="2016-08-27">27/08/2016</time></p>
+                    <p class="post-card__excerpt">Analyse de la marche lors de la rééducation pour l’amélioration de la mobilité des personnes amputées.</p>
+                    <a href="https://www.uphf.fr/lamih/departements/sciences-lhomme-vivant-shv/projets/graal" class="post-card__more">lire plus</a>
+                </article>
+
+                <article class="post-card post-card--orange">
+                    <h2 class="post-card__title"><a href="guide-methodologique-etp.html">Guide méthodologique pour l’élaboration d’un programme d’éducation thérapeutique pour personnes amputées de membre(s)</a></h2>
+                    <p class="post-card__meta"><time datetime="2007-05-11">11/05/2007</time></p>
+                    <p class="post-card__excerpt">L’objectif de ce document est la proposition de recommandations pour la mise en place d’un programme d’éducation thérapeutique (ETP) pour les personnes amputées de membres inférieurs ou de membres supérieurs en situation de handicap. Il a été élaboré selon la…</p>
+                    <a href="https://www.adepa.fr/guide-methodologique-pour-lelaboration-dun-programme-deducation-therapeutique-pour-personnes-amputees-de-membres/" class="post-card__more">lire plus</a>
+                </article>
+
+            </div>
+
+            <div class="research-empty" id="research-empty" hidden>
+                <p>Aucun document ne correspond à votre recherche.</p>
+                <button type="button" class="btn btn--outline-dark" id="research-reset">Afficher tous les documents</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Bloc "Pourquoi adhérer à l'ADEPA ?" -->
+    <section class="section section--white">
+        <div class="container">
+            <div class="adherer-box row">
+                <div class="col-5">
+                    <img src="src/img/recherches-etudes/adherer.png" alt="adherer" width="275" height="171">
+                </div>
+                <div class="col-7">
+                    <h2 class="title title--green">
+                        Pourquoi adhérer<span class="title__accent">à l’ADEPA ?</span>
+                    </h2>
+                    <p><strong>Parce que le service dû aux personnes amputées n’est pas offert de façon satisfaisante.</strong></p>
+                    <p><strong>Parce qu’il est difficile de faire évoluer les textes.</strong></p>
+                    <p><strong>Parce que dans les commissions ministérielles, il n’y a aucun représentant de notre situation spécifique.</strong></p>
+                    <p>
+                        <a class="adherer-box__statuts" href="docs/Statuts-ADEPA-du-06-mai-2023.pdf" target="_blank" rel="noopener">Les statuts d’ADEPA</a>
+                    </p>
+                    <a class="btn btn--outline-dark btn--more" href="adherer.html">J’adhère à l’Adepa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Réseaux sociaux -->
+    <section class="section section--white">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <h2 class="title title--blue">
+                        Suivez-nous sur nos réseaux<span class="title__accent">@adepa_fr</span>
+                    </h2>
+                    <p>Retrouvez toute l’actualité de l’association ADEPA et de ses partenaires sur notre page Facebook et venez discuter et participer à l’essor des sujets portés par l’association au sein de nos différents groupes de discussion !</p>
+                </div>
+                <div class="col-7">
+                    <ul class="social-list">
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="https://www.facebook.com/adepa.france/" target="_blank" rel="noopener" aria-label="ADEPA sur Facebook">
+                                <img class="social-list__img" src="src/img/recherches-etudes/Facebook.png" alt="Facebook" width="202" height="153">
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="https://www.instagram.com/adepa_france/" target="_blank" rel="noopener" aria-label="ADEPA sur Instagram">
+                                <img class="social-list__img" src="src/img/recherches-etudes/Instagram.png" alt="Instagram" width="186" height="186">
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="https://fr.linkedin.com/company/adepa-france" target="_blank" rel="noopener" aria-label="ADEPA sur LinkedIn">
+                                <img class="social-list__img" src="src/img/recherches-etudes/LinkedIn.png" alt="LinkedIn" width="197" height="197">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+    <div class="footer__main">
+        <div class="container footer__grid footer__grid--5cols">
+            <div class="footer__brand footer__brand--yellow">
+                <img src="src/img/logoAdepaNoir.png" width="272" height="224" alt="Logo ADEPA" loading="lazy">
+            </div>
+
+            <div class="footer__col">
+                <p class="footer__title"><a href="https://www.adepa.fr/actualites/">Actualités</a></p>
+            </div>
+
+            <div class="footer__col">
+                <p class="footer__title"><a href="https://www.adepa.fr/le-mag-adepa/">Les magazines</a></p>
+            </div>
+
+            <div class="footer__col">
+                <p class="footer__title">
+                    <a class="footer__link--member" href="https://adepa.frama.space/s/kzT5PXMxzCTtH7k" title="Documents ADEPA" target="_blank" rel="noopener">Espace adhérents actifs</a>
+                </p>
+            </div>
+
+            <div class="footer__col">
+                <p class="footer__title">Contacts</p>
+                <ul class="footer__list">
+                    <li><a href="https://www.adepa.fr/nous-contacter/">Nous contacter</a></li>
+                    <li><a href="aide.html">J’ai besoin d’aide</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+            <a href="https://www.adepa.fr/mentions-legales/" title="Mentions légales">Mentions légales</a>
+            <a href="https://www.adepa.fr/politique-de-confidentialite/" title="Politique de confidentialité">Politique de confidentialité</a>
+            <span>Adepa © 2023. Tous droits réservés</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

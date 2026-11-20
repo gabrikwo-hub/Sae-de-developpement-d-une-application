@@ -1,0 +1,99 @@
+/* ---------- En-tête & bandeau photo Nos actions ---------- */
+.actions-banner {
+    width: min(var(--container), 100% - 2 * var(--container-pad));
+    margin-inline: auto;
+    padding-top: 180px;
+}
+
+.actions-banner__card {
+    width: min(820px, 90%);
+    margin-inline: auto;
+    padding: 3rem 2rem 2rem;
+    background-color: var(--c-white);
+    text-align: center;
+}
+
+.actions-banner__title {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2rem, 1.2rem + 2vw, 3.1rem);
+    font-weight: 700;
+    color: var(--c-ink);
+}
+
+.actions-banner__flower {
+    margin-inline: auto;
+    width: 79px;
+    height: auto;
+}
+
+/* ---------- Introduction sur fond à traits ---------- */
+.actions-intro {
+    background-color: transparent;
+    padding: 2rem 30px 60px;
+}
+.actions-intro__lead {
+    font-size: 1.25rem;
+}
+
+/* ---------- Cartes d'actions sur fond vert pâle ---------- */
+.action-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px 20px;
+    background-color: var(--c-green-soft);
+    text-align: center;
+}
+.action-card__icon {
+    margin-bottom: 20px;
+    color: var(--c-green);
+}
+.action-card__text a {
+    font-weight: 700;
+    color: var(--c-green);
+}
+.action-card__text a:hover,
+.action-card__text a:focus-visible {
+    color: var(--c-green-dark);
+}
+
+/* ---------- Sections vertes avec liens vert clair ---------- */
+.section--green a.link-light {
+    color: var(--c-green-light);
+    font-weight: 700;
+}
+.section--green a.link-light:hover,
+.section--green a.link-light:focus-visible {
+    color: var(--c-white);
+}
+
+/* ---------- Séparateur épais vert & colonnes soulignées ---------- */
+.divider--green {
+    width: 300px;
+    height: 0;
+    margin: 60px auto 0;
+    border: 0;
+    border-top: 15px solid var(--c-green);
+}
+
+.col--underline-green {
+    border-bottom: 15px solid var(--c-green);
+    padding-bottom: 20px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+    .actions-banner {
+        width: calc(100% - 2 * var(--container-pad));
+        padding-top: 120px;
+    }
+}
+@media (max-width: 640px) {
+    .actions-banner {
+        padding-top: 80px;
+    }
+    .actions-banner__card {
+        width: 94%;
+        padding: 2rem 1.25rem 1.5rem;
+    }
+}
