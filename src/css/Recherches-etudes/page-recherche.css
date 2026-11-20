@@ -4,7 +4,7 @@
 
 /* ---------- Bannière d'en-tête avec filet vert et encadré blanc ---------- */
 .page-hero {
-    background: url("../../img/recherches-etudes/background-recherches.jpg") top center / 100% 50% no-repeat;
+    background: url("../../img/recherches-etudes") top center / 100% 50% no-repeat;
 }
 
 .page-hero__banner {
