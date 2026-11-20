@@ -81,3 +81,91 @@
     background: var(--c-ink);
     color: var(--c-white);
 }
+/* ---------- Barre de recherche des études et documents ---------- */
+.research-toolbar {
+    display: grid;
+    grid-template-columns: 1fr minmax(190px, 230px);
+    gap: 1rem;
+    background: var(--c-green-soft);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.research-toolbar__field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.research-toolbar__icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--c-green);
+    pointer-events: none;
+}
+
+.research-toolbar__input {
+    width: 100%;
+    padding: .8rem 2.75rem .8rem 2.85rem;
+    font: inherit;
+    font-weight: 600;
+    color: var(--c-ink);
+    background: var(--c-white);
+    border: 2px solid var(--c-ink);
+    border-radius: var(--radius);
+    transition: border-color var(--ease);
+}
+
+.research-toolbar__input::placeholder {
+    font-weight: 400;
+    color: var(--c-placeholder);
+}
+
+.research-toolbar__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.research-toolbar__input:focus {
+    border-color: var(--c-green);
+}
+
+.research-toolbar__clear {
+    position: absolute;
+    right: .5rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    background: transparent;
+    color: var(--c-ink);
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.research-toolbar__clear:hover {
+    color: var(--c-green);
+}
+
+.research-status {
+    margin-bottom: 1.25rem;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--c-green);
+}
+
+.research-empty {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: var(--c-green-soft);
+}
+
+.research-empty p {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .research-toolbar {
+        grid-template-columns: 1fr;
+    }
+}
