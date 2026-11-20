@@ -4,7 +4,7 @@
 
 /* ---------- Bannière d'en-tête avec filet vert et encadré blanc ---------- */
 .page-hero {
-    background: url("../img/fond-trait.png") top center / 100% 50% no-repeat;
+    background: url("../../img/recherches-etudes/background-recherches.jpg") top center / 100% 50% no-repeat;
 }
 
 .page-hero__banner {
@@ -59,7 +59,7 @@
 
 /* ---------- Encart "Pourquoi adhérer à l'ADEPA ?" ---------- */
 .adherer-box {
-    background: var(--c-green-soft) url("../img/motif-adherer.png") right -25% bottom -75% no-repeat;
+    background: var(--c-green-soft) url("../../img/fleure.png") right -25% bottom -75% no-repeat;
     padding: clamp(1.5rem, 4vw, 3.5rem);
 }
 
