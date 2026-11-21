@@ -1,9 +1,15 @@
-
 (function () {
+  // ← ADD THIS BLOCK: Restore scroll position on page load
+  const savedScroll = sessionStorage.getItem('mapScroll');
+  if (savedScroll !== null) {
+    window.scrollTo(0, parseInt(savedScroll, 10));
+    sessionStorage.removeItem('mapScroll');
+  }
+
   const wrap = document.getElementById('france-map');
   if (!wrap) return;
 
-  const selected  = wrap.dataset.selected;
+  const selected = wrap.dataset.selected;
   const available = JSON.parse(wrap.dataset.available);
 
   // Iterate over every department path
@@ -14,9 +20,9 @@
     // Mark empty departments visually (CSS handles the grey look)
     if (!available.includes(name)) {
       path.classList.add('is-empty');
-      path.setAttribute('tabindex', '-1');   // not focusable, not clickable
+      path.setAttribute('tabindex', '-1');
       path.setAttribute('aria-hidden', 'true');
-      path.style.pointerEvents = 'none';      // clicks pass through, no hover state
+      path.style.pointerEvents = 'none';
       return;
     }
 
@@ -29,15 +35,15 @@
     path.setAttribute('aria-label', name);
 
     // Navigate on click
-    const go = () => { window.location.search = '?departement=' + encodeURIComponent(name); };
+    const go = () => {
+      sessionStorage.setItem('mapScroll', String(window.scrollY));
+      window.location.search = '?departement=' + encodeURIComponent(name);
+    };
     path.addEventListener('click', go);
     path.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
     });
   });
 
-  // Optional: improve perceived responsiveness on touch devices
-  // by removing the 300ms tap delay (already handled by modern browsers,
-  // but this ensures it on older ones).
   wrap.style.touchAction = 'manipulation';
 })();
