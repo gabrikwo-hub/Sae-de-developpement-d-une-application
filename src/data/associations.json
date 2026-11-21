@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Debout en Bouts",
+    "url": "https://www.deboutenbouts.fr/",
+    "image": "src/img/asso/Logo-debout_en_bouts.png",
+    "alt": "logo Debout en Bouts",
+    "description": "Pour soutenir les personnes amputées et pour une meilleure équité de prise en charge des prothèses. – créée récemment par Matthieu Lartot, journaliste sportif et amputé fémoral suite à une maladie."
+  },
+  {
+    "name": "Comme les Autres",
+    "url": "https://www.commelesautres.org/",
+    "image": "src/img/asso/Logo-comme-les-autres-480x480.png",
+    "alt": "logo Comme les Autres",
+    "description": "L’association Comme les Autres propose un accompagnement social dynamisé par le sport et les sensations fortes aux personnes devenues handicapées moteur après un accident."
+  },
+  {
+    "name": "Lames de Joie",
+    "url": "https://lamesdejoie.com/",
+    "image": "src/img/asso/lamesdejoie.jpg",
+    "alt": "logo Lames de Joie",
+    "description": "Lames de Joie a pour vocation première de prêter des lames de course en carbone aux enfants amputés de l’un ou de leurs deux membres inférieurs dans le but de leur permettre de pratiquer une activité sportive."
+  },
+  {
+    "name": "Team Vent Debout",
+    "url": "https://www.teamventdebout.org/",
+    "image": "src/img/asso/logo-team-vent-debout-480x273.jpg",
+    "alt": "logo Team Vent Debout",
+    "description": "La voile comme vecteur inclusif (Courses au large, régates). Changeons ensemble le regard sur le handicap. La course au large est à ce jour la seule discipline sportive véritablement inclusive : valides, handis, hommes, femmes, un seul classement !"
+  },
+  {
+    "name": "Une lame pour courir (entr'Aide)",
+    "url": "https://www.unelamepourcourir.com/",
+    "image": "src/img/asso/Logo-Amp-Traide-480x282.png",
+    "alt": "logo Une lame pour courir",
+    "description": "« Pour un enfant, courir est un droit, pas un privilège… » L’association s’engage à prêter aux enfants le matériel nécessaire à la réalisation de la prothèse de course et à le renouveler en fonction de la prise de poids de l’enfant."
+  },
+  {
+    "name": "Adapt-Alpes",
+    "url": "https://www.adapt-alpes.fr/",
+    "image": "src/img/asso/Adapt_Logo-480x480.png",
+    "alt": "logo Adapt-Alpes",
+    "description": "Bousculer les normes : Redécouvrez-vous, osez être vous-mêmes, soyez fièrement différent ! Utiliser le partage d’expérience et l’activité physique comme outil de sociabilisation, d’émancipation, et comme source de confiance et de plaisir."
+  },
+  {
+    "name": "Piedestal",
+    "url": "https://www.facebook.com/people/Asso-Piedestal/100028372373901/",
+    "image": "src/img/asso/Logo-Piedestal-300x298.png",
+    "alt": "logo Piedestal",
+    "description": "Promouvoir, améliorer et faire découvrir le quotidien des personnes amputées par l’organisation d’activités ludiques, récréatives ou sportives."
+  },
+  {
+    "name": "Bout de vie",
+    "url": "https://www.boutdevie.org/",
+    "image": "src/img/asso/Logo-Bout-de-vie-480x480.png",
+    "alt": "logo Bout de vie",
+    "description": "Aider et accompagner les personnes amputées quel que soit leur âge, la nature, le degré et l’ancienneté de leur mutilation, à disposer des « clés » et « outils » pour appréhender, intégrer et surmonter leur différence par la valorisation de leur potentiel de vie."
+  },
+  {
+    "name": "APF France handicap",
+    "url": "https://www.apf-francehandicap.org/",
+    "image": "src/img/asso/Logo-apf-480x480.png",
+    "alt": "logo APF France handicap",
+    "description": "L’association agit contre les discriminations et pour l’égalité des droits, la citoyenneté, la participation sociale et le libre choix du mode de vie des personnes en situation de handicap et de leur famille."
+  },
+  {
+    "name": "Grhandiose",
+    "url": "https://www.grhandiose.com/",
+    "image": "src/img/asso/Logo-Grhandiose-480x480.png",
+    "alt": "logo Grhandiose",
+    "description": "La première communauté qui favorise le mieux-vivre ensemble entre handis et valides par le partage d’expérience et l’entraide au quotidien."
+  },
+  {
+    "name": "France Assos Santé",
+    "url": "https://www.france-assos-sante.org/",
+    "image": "src/img/asso/Logo-France-assos.png",
+    "alt": "logo France Assos Santé",
+    "description": "Organisation de référence pour représenter les patients et les usagers du système de santé et défendre leurs intérêts, issue de l’Union nationale des associations agréées d’usagers du système de santé."
+  },
+  {
+    "name": "IC2A",
+    "url": "https://www.ic2a.eu/",
+    "image": "src/img/asso/IC2A-Logo-short.png",
+    "alt": "logo IC2A",
+    "description": "« Ensemble, nous unissons le monde en une seule voix pour les amputés ». Alliance internationale partageant expériences et meilleures pratiques pour améliorer la qualité de vie des personnes amputées ou nées avec une déficience d’un membre."
+  },
+  {
+    "name": "KWA (Keep Walk Asso)",
+    "url": "https://www.kwa-france.org/",
+    "image": "src/img/asso/Logo-KWA-480x333.png",
+    "alt": "logo KWA",
+    "description": "Vient en aide aux personnes amputées de jambes en fournissant des prothèses réformées. Nous leur proposons des solutions personnalisées pour envoyer directement les prothèses à notre association."
+  },
+  {
+    "name": "Vagdespoir",
+    "url": "https://www.vagdespoir.com/",
+    "image": "src/img/asso/Logo-Vagdespoir-480x480.png",
+    "alt": "logo Vagdespoir",
+    "description": "Créer la rencontre, éduquer le regard et dépasser nos préjugés pour percevoir le handicap autrement. Participez à une aventure hors du commun entre handis et valides, réunis au travers des sports handiglisses et des grands espaces."
+  },
+  {
+    "name": "CÉ2A",
+    "url": "https://www.ce2a.info/",
+    "image": "src/img/asso/Logo-CE2A-480x480.png",
+    "alt": "logo CÉ2A",
+    "description": "Conseils, échanges et astuces entre amputés."
+  },
+  {
+    "name": "HANDIDREAM",
+    "url": "https://www.handidream.com/",
+    "image": "src/img/asso/Logo-Handidream-480x480.png",
+    "alt": "logo HANDIDREAM",
+    "description": "« Apprendre à vivre ses rêves avec son handicap ». Impliquée en région Provence Alpes Côtes d’Azur, bien décidée à contribuer à un changement profond de la société face au handicap sur tous les fronts."
+  },
+  {
+    "name": "Handicap International",
+    "url": "https://www.hi.org/fr/",
+    "image": "src/img/asso/Logo-Handicap-international-480x480.png",
+    "alt": "logo Handicap International",
+    "description": "Vient en aide aux populations vulnérables, notamment les personnes handicapées, partout dans le monde où cela est nécessaire. L’association répond à leurs besoins essentiels et améliore leurs conditions de vie."
+  },
+  {
+    "name": "Breizh Winners!",
+    "url": "https://breizhwinners.com/",
+    "image": "src/img/asso/Logo-Breizh-Winners-480x264.png",
+    "alt": "logo Breizh Winners",
+    "description": "Des activités pour tous les goûts ! Venez (re)découvrir la pratique sportive lors d’événements d’initiations. La convivialité et le partage sont les maîtres mots de ces moments sportifs."
+  },
+  {
+    "name": "assedea",
+    "url": "https://www.assedea.fr/",
+    "image": "src/img/asso/Logo-assedea-1-480x142.png",
+    "alt": "logo assedea",
+    "description": "Depuis 1975, les bénévoles de cette association font tout pour améliorer la qualité de vie des personnes atteintes de malformations de membres inférieurs et supérieurs, relayés par un réseau de familles adhérentes et solidaires."
+  }
+]

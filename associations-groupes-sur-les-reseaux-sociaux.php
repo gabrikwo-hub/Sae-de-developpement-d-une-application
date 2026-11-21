@@ -8,9 +8,6 @@
     <meta name=description content="ADEPA a développé un réseau de bénévoles dans votre région pour répondre à toutes les questions que vous vous posez sur l''amputation.">
     <meta property=og:locale content=fr_FR>
     <meta property=og:type content=article>
-    <meta property=og:title content="Vos contacts en région - ADEPA">
-    <meta property=og:description content="ADEPA a développé un réseau de bénévoles dans votre région pour répondre à toutes les questions que vous vous posez sur l''amputation.">
-    <meta property=og:url content=https://www.adepa.fr/vos-contacts-en-region/>
     <meta property=og:site_name content=ADEPA>
     <meta property=article:modified_time content=2024-02-13T09:10:59+00:00>
     <meta name=twitter:card content=summary_large_image>
@@ -70,7 +67,7 @@
                 <li class="subnav__item"><a class="subnav__link" href="#" title="Adherer à ADEPA">Adhérer à l’ADEPA</a></li>
                 <li class="subnav__item"><a class="subnav__link" href="#" title="Avantages de l'adhesion">Avantages de l’adhésion à l’ADEPA</a></li>
                 <li class="subnav__item"><a class="subnav__link" href="#" title="Faire un don">Faire un don</a></li>
-                <li class="subnav__item"><a class="subnav__link" href="associations-groupes-sur-les-reseaux-sociaux.html" title="Associations et groupes">Associations et groupes sur les réseaux sociaux</a></li>
+                <li class="subnav__item"><a class="subnav__link" href="associations-groupes-sur-les-reseaux-sociaux.php" title="Associations et groupes">Associations et groupes sur les réseaux sociaux</a></li>
                 <li class="subnav__item"><a class="subnav__link" href="#" title="Agenda">Agenda</a></li>
                 <li class="subnav__item"><a class="subnav__link" href="#" title="Boutique">La boutique</a></li>
                 <li class="subnav__item"><a class="subnav__link" href="#" title="Location matériel">Location de matériel</a></li>
@@ -199,138 +196,30 @@
       </header>
 
       <div class="card-grid">
-              <!-- Debout en Bouts -->
-      <a class="card" href="https://www.deboutenbouts.fr/">
-        <img src="src/img/asso/Logo-debout_en_bouts.png" class="card__img" alt="logo Debout en Bouts">
-        <h3 class="card__title">Debout en Bouts</h3>
-        <p class="card__text">Pour soutenir les personnes amputées et pour une meilleure équité de prise en charge des prothèses. – créée récemment par Matthieu Lartot, journaliste sportif et amputé fémoral suite à une maladie.</p>
-      </a>
+      <?php
+          $jsonFile = __DIR__ . '/src/data/associations.json';
 
-      <!-- Comme les Autres -->
-      <a class="card" href="https://www.commelesautres.org/">
-        <img src="src/img/asso/Logo-comme-les-autres-480x480.png" class="card__img" alt="logo Comme les Autres">
-        <h3 class="card__title">Comme les Autres</h3>
-        <p class="card__text">L’association Comme les Autres propose un accompagnement social dynamisé par le sport et les sensations fortes aux personnes devenues handicapées moteur après un accident.</p>
-      </a>
+          if (file_exists($jsonFile)) {
+          $jsonData = file_get_contents($jsonFile);
+          $associations = json_decode($jsonData, true);
 
-      <!-- Lames de Joie -->
-      <a class="card" href="https://lamesdejoie.com/">
-        <img src="src/img/asso/lamesdejoie.jpg" class="card__img" alt="logo Lames de Joie">
-        <h3 class="card__title">Lames de Joie</h3>
-        <p class="card__text">Lames de Joie a pour vocation première de prêter des lames de course en carbone aux enfants amputés de l’un ou de leurs deux membres inférieurs dans le but de leur permettre de pratiquer une activité sportive.</p>
+          if (is_array($associations)) {
+             foreach ($associations as $asso):
+        ?>
+      <a class="card" href="<?= htmlspecialchars($asso['url'], ENT_QUOTES, 'UTF-8') ?>">
+        <img src="<?= htmlspecialchars($asso['image'], ENT_QUOTES, 'UTF-8') ?>" class="card__img" alt="<?= htmlspecialchars($asso['alt'], ENT_QUOTES, 'UTF-8') ?>">
+        <h3 class="card__title"><?= htmlspecialchars($asso['name'], ENT_QUOTES, 'UTF-8') ?></h3>
+        <p class="card__text"><?= htmlspecialchars($asso['description'], ENT_QUOTES, 'UTF-8') ?></p>
       </a>
-
-      <!-- Team Vent Debout -->
-      <a class="card" href="https://www.teamventdebout.org/">
-        <img src="src/img/asso/logo-team-vent-debout-480x273.jpg" class="card__img" alt="logo Team Vent Debout">
-        <h3 class="card__title">Team Vent Debout</h3>
-        <p class="card__text">La voile comme vecteur inclusif (Courses au large, régates). Changeons ensemble le regard sur le handicap. La course au large est à ce jour la seule discipline sportive véritablement inclusive : valides, handis, hommes, femmes, un seul classement !</p>
-      </a>
-
-      <!-- Une lame pour courir (entr'Aide) -->
-      <a class="card" href="https://www.unelamepourcourir.com/">
-        <img src="src/img/asso/Logo-Amp-Traide-480x282.png" class="card__img" alt="logo Une lame pour courir">
-        <h3 class="card__title">Une lame pour courir (entr'Aide)</h3>
-        <p class="card__text">« Pour un enfant, courir est un droit, pas un privilège… » L’association s’engage à prêter aux enfants le matériel nécessaire à la réalisation de la prothèse de course et à le renouveler en fonction de la prise de poids de l’enfant.</p>
-      </a>
-
-      <!-- Adapt-Alpes -->
-      <a class="card" href="https://www.adapt-alpes.fr/">
-        <img src="src/img/asso/Adapt_Logo-480x480.png" class="card__img" alt="logo Adapt-Alpes">
-        <h3 class="card__title">Adapt-Alpes</h3>
-        <p class="card__text">Bousculer les normes : Redécouvrez-vous, osez être vous-mêmes, soyez fièrement différent ! Utiliser le partage d’expérience et l’activité physique comme outil de sociabilisation, d’émancipation, et comme source de confiance et de plaisir.</p>
-      </a>
-
-      <!-- Piedestal -->
-      <a class="card" href="https://www.piedestal-asso.fr/">
-        <img src="src/img/asso/Logo-Piedestal-300x298.png" class="card__img" alt="logo Piedestal">
-        <h3 class="card__title">Piedestal</h3>
-        <p class="card__text">Promouvoir, améliorer et faire découvrir le quotidien des personnes amputées par l’organisation d’activités ludiques, récréatives ou sportives.</p>
-      </a>
-
-      <!-- Bout de vie -->
-      <a class="card" href="https://www.boutdevie.org/">
-        <img src="src/img/asso/Logo-Bout-de-vie-480x480.png" class="card__img" alt="logo Bout de vie">
-        <h3 class="card__title">Bout de vie</h3>
-        <p class="card__text">Aider et accompagner les personnes amputées quel que soit leur âge, la nature, le degré et l’ancienneté de leur mutilation, à disposer des « clés » et « outils » pour appréhender, intégrer et surmonter leur différence par la valorisation de leur potentiel de vie.</p>
-      </a>
-
-      <!-- APF France handicap -->
-      <a class="card" href="https://www.apf-francehandicap.org/">
-        <img src="src/img/asso/Logo-apf-480x480.png" class="card__img" alt="logo APF France handicap">
-        <h3 class="card__title">APF France handicap</h3>
-        <p class="card__text">L’association agit contre les discriminations et pour l’égalité des droits, la citoyenneté, la participation sociale et le libre choix du mode de vie des personnes en situation de handicap et de leur famille.</p>
-      </a>
-
-      <!-- Grhandiose -->
-      <a class="card" href="https://www.grhandiose.com/">
-        <img src="src/img/asso/Logo-Grhandiose-480x480.png" class="card__img" alt="logo Grhandiose">
-        <h3 class="card__title">Grhandiose</h3>
-        <p class="card__text">La première communauté qui favorise le mieux-vivre ensemble entre handis et valides par le partage d’expérience et l’entraide au quotidien.</p>
-      </a>
-
-      <!-- France Assos Santé -->
-      <a class="card" href="https://www.france-assos-sante.org/">
-        <img src="src/img/asso/Logo-France-assos.png" class="card__img" alt="logo France Assos Santé">
-        <h3 class="card__title">France Assos Santé</h3>
-        <p class="card__text">Organisation de référence pour représenter les patients et les usagers du système de santé et défendre leurs intérêts, issue de l’Union nationale des associations agréées d’usagers du système de santé.</p>
-      </a>
-
-      <!-- IC2A -->
-      <a class="card" href="https://www.ic2a.eu/">
-        <img src="src/img/asso/IC2A-Logo-short.png" class="card__img" alt="logo IC2A">
-        <h3 class="card__title">IC2A</h3>
-        <p class="card__text">« Ensemble, nous unissons le monde en une seule voix pour les amputés ». Alliance internationale partageant expériences et meilleures pratiques pour améliorer la qualité de vie des personnes amputées ou nées avec une déficience d’un membre.</p>
-      </a>
-
-      <!-- KWA (Keep Walk Asso) -->
-      <a class="card" href="https://www.kwa-france.org/">
-        <img src="src/img/asso/Logo-KWA-480x333.png" class="card__img" alt="logo KWA">
-        <h3 class="card__title">KWA (Keep Walk Asso)</h3>
-        <p class="card__text">Vient en aide aux personnes amputées de jambes en fournissant des prothèses réformées. Nous leur proposons des solutions personnalisées pour envoyer directement les prothèses à notre association.</p>
-      </a>
-
-      <!-- Vagdespoir -->
-      <a class="card" href="https://www.vagdespoir.com/">
-        <img src="src/img/asso/Logo-Vagdespoir-480x480.png" class="card__img" alt="logo Vagdespoir">
-        <h3 class="card__title">Vagdespoir</h3>
-        <p class="card__text">Créer la rencontre, éduquer le regard et dépasser nos préjugés pour percevoir le handicap autrement. Participez à une aventure hors du commun entre handis et valides, réunis au travers des sports handiglisses et des grands espaces.</p>
-      </a>
-
-      <!-- CÉ2A -->
-      <a class="card" href="https://www.ce2a.info/">
-        <img src="src/img/asso/Logo-CE2A-480x480.png" class="card__img" alt="logo CÉ2A">
-        <h3 class="card__title">CÉ2A</h3>
-        <p class="card__text">Conseils, échanges et astuces entre amputés.</p>
-      </a>
-
-      <!-- HANDIDREAM -->
-      <a class="card" href="https://www.handidream.com/">
-        <img src="src/img/asso/Logo-Handidream-480x480.png" class="card__img" alt="logo HANDIDREAM">
-        <h3 class="card__title">HANDIDREAM</h3>
-        <p class="card__text">« Apprendre à vivre ses rêves avec son handicap ». Impliquée en région Provence Alpes Côtes d’Azur, bien décidée à contribuer à un changement profond de la société face au handicap sur tous les fronts.</p>
-      </a>
-
-      <!-- Handicap International -->
-      <a class="card" href="https://www.hi.org/fr/">
-        <img src="src/img/asso/Logo-Handicap-international-480x480.png" class="card__img" alt="logo Handicap International">
-        <h3 class="card__title">Handicap International</h3>
-        <p class="card__text">Vient en aide aux populations vulnérables, notamment les personnes handicapées, partout dans le monde où cela est nécessaire. L’association répond à leurs besoins essentiels et améliore leurs conditions de vie.</p>
-      </a>
-
-      <!-- Breizh Winners! -->
-      <a class="card" href="https://breizhwinners.com/">
-        <img src="src/img/asso/Logo-Breizh-Winners-480x264.png" class="card__img" alt="logo Breizh Winners">
-        <h3 class="card__title">Breizh Winners!</h3>
-        <p class="card__text">Des activités pour tous les goûts ! Venez (re)découvrir la pratique sportive lors d’événements d’initiations. La convivialité et le partage sont les maîtres mots de ces moments sportifs.</p>
-      </a>
-
-      <!-- assedea -->
-      <a class="card" href="https://www.assedea.fr/">
-        <img src="src/img/asso/Logo-assedea-1-480x142.png" class="card__img" alt="logo assedea">
-        <h3 class="card__title">assedea</h3>
-        <p class="card__text">Depuis 1975, les bénévoles de cette association font tout pour améliorer la qualité de vie des personnes atteintes de malformations de membres inférieurs et supérieurs, relayés par un réseau de familles adhérentes et solidaires.</p>
-      </a>
+      <?php
+              endforeach;
+          } else {
+              echo '<p>Error: Invalid JSON format in associations.json</p>';
+          }
+          } else {
+              echo '<p>Error: associations.json was not found.</p>';
+          }
+      ?>
             </div>
 
       

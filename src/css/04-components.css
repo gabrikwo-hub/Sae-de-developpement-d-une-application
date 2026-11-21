@@ -199,57 +199,20 @@ img.card__img {
 
 
 
-.identity-card {
-  display: flex;
-  max-width: 450px;
-  margin: 2rem auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
+.france-map svg { display: block; width: 100%; max-width: 600px; height: auto; margin: 0 auto; }
+.france-map #map-label { text-align: center; font-weight: 700; margin: .5rem 0; }
 
-.identity-card__left {
-  background: #fff;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
+.france-map .region { cursor: pointer; outline: none; }
+.france-map .region path {
+  fill: var(--c-green);
+  stroke: var(--c-white);
+  stroke-width: .5;
+  transition: fill var(--ease);
 }
-
-.identity-card__img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #2e7d32;
-}
-
-.identity-card__right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.identity-card__name {
-  background: #fff;
-  padding: 1rem 1.5rem;
-  margin: 0;
-  border-bottom: 2px solid #e0e0e0;
-}
-
-.identity-card__details {
-  background: #2e7d32;
-  color: #fff;
-  padding: 1.25rem 1.5rem;
-  flex: 1;
-}
-
-.identity-card__details p,
-.identity-card__details a {
-  margin: 0 0 0.75rem;
-  color: #fff;
-  text-decoration: none;
-}
-
-.identity-card__details a:hover {
-  text-decoration: underline;
-}
+/* Per-department hover (overrides the group-level hover) */
+.france-map path.departement:hover { fill: var(--c-orange); }
+.france-map path.departement.is-active { fill: var(--c-green-dark); }
+.france-map path.departement.is-empty { fill: #ddd; }
+.france-map path.departement { cursor: pointer; }
+.france-map path.departement.is-empty { cursor: not-allowed; }
+.card[hidden] { display: none; }

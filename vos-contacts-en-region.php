@@ -12,10 +12,7 @@
   <meta property=og:description content="ADEPA a développé un réseau de bénévoles dans votre région pour répondre à toutes les questions que vous vous posez sur l''amputation.">
   <meta property=og:url content=https://www.adepa.fr/vos-contacts-en-region/>
   <meta property=og:site_name content=ADEPA>
-  <meta property=article:modified_time content=2024-02-13T09:10:59+00:00>
-  <meta name=twitter:card content=summary_large_image>
-  <meta name=twitter:label1 content="Durée de lecture estimée">
-  <meta name=twitter:data1 content="3 minutes">
+  
   <title>Vos contacts en région - ADEPA</title>
   <link rel="stylesheet" href="src/css/00-variables.css"/>
   <link rel="stylesheet" href="src/css/01-base.css"/>
@@ -24,8 +21,7 @@
   <link rel="stylesheet" href="src/css/04-components.css"/>
   <link rel="stylesheet" href="src/css/05-footer.css"/>
   <script src="src/js/site.js" defer></script>
-  <script type="module" src="src/js/cart.js"></script>
-  <!-- Place this right before </body> -->
+  <script src="src/js/carte.js " ></script>
 </head>
 <body>
   <header class="site-header">
@@ -68,7 +64,7 @@
                   <li class="subnav__item"><a class="subnav__link" href="#" title="Adherer à ADEPA">Adhérer à l’ADEPA</a></li>
                   <li class="subnav__item"><a class="subnav__link" href="#" title="Avantages de l'adhesion">Avantages de l’adhésion à l’ADEPA</a></li>
                   <li class="subnav__item"><a class="subnav__link" href="#" title="Faire un don">Faire un don</a></li>
-                  <li class="subnav__item"><a class="subnav__link" href="associations-groupes-sur-les-reseaux-sociaux.html" title="Associations et groupes">Associations et groupes sur les réseaux sociaux</a></li>
+                  <li class="subnav__item"><a class="subnav__link" href="associations-groupes-sur-les-reseaux-sociaux.php" title="Associations et groupes">Associations et groupes sur les réseaux sociaux</a></li>
                   <li class="subnav__item"><a class="subnav__link" href="#" title="Agenda">Agenda</a></li>
                   <li class="subnav__item"><a class="subnav__link" href="#" title="Boutique">La boutique</a></li>
                   <li class="subnav__item"><a class="subnav__link" href="#" title="Location matériel">Location de matériel</a></li>
@@ -179,7 +175,7 @@
     <section class="intro section section--green-theme">
       <div class="container text-center">
         <h1 class="title title--green">
-          <span class="title__accent">Cette page vous propose une liste de contacts que vous pouvez trouver en fonction de la région.</span>
+          <span class="title__accent">Cette page propose une liste de contacts que vous pouvez trouver en fonction du département.</span>
         </h1>
       </div>
     </section>
@@ -202,83 +198,111 @@
         }
 
         $jsonData = file_get_contents($jsonFile);
-
         if ($jsonData === false) {
             die('Error: Could not read contacts.json.');
         }
 
         $contacts = json_decode($jsonData, true);
-
         if (json_last_error() !== JSON_ERROR_NONE) {
             die('JSON error: ' . json_last_error_msg());
         }
-
-        if (!is_array($contacts)) {
-            die('Error: JSON does not contain a contacts array.');
-        }
-
-        if (empty($contacts)) {
+        if (!is_array($contacts) || empty($contacts)) {
             die('No contacts found in contacts.json.');
         }
         ?>
 
         <?php
-        $selectedRegion = $_GET['region'] ?? 'all';
+        $selectedRegion = $_GET['departement'] ?? 'all';
 
-        // Build the list of regions automatically from the JSON
-        $regions = array_unique(array_filter(array_column($contacts, 'region')));
-        sort($regions);
+        // Department names that exist as shapes on the map (read from the SVG file itself)
+        preg_match_all('/<path[^>]*data-nom="([^"]+)"/u', file_get_contents(__DIR__ . '/carte-france.php'), $m);
+        $mapNames = array_diff(array_unique($m[1]), ['Hors France']);
+        
+        // Departments that have at least one contact
+        $departement = array_unique(array_filter(array_column($contacts, 'departement')));
+        sort($departement);
+
+        // Any contact whose department is not on the map = outside France
+        $isOutside = fn($d) => !in_array($d, $mapNames, true);
+        if (array_filter($departement, $isOutside)) {
+            $departement[] = 'Hors France';   // makes the "Hors France" shape clickable
+        }
 
         // Ignore unknown values in the URL
-        if ($selectedRegion !== 'all' && !in_array($selectedRegion, $regions, true)) {
+        if ($selectedRegion !== 'all' && !in_array($selectedRegion, $departement, true)) {
             $selectedRegion = 'all';
         }
 
-        // Keep only the contacts that match
-        $filteredContacts = array_filter($contacts, function ($contact) use ($selectedRegion) {
-            return $selectedRegion === 'all' || ($contact['region'] ?? '') === $selectedRegion;
-        });
+        if ($selectedRegion === 'all') {
+            // One card per person (the JSON repeats people who cover several departments)
+            $filteredContacts = [];
+            foreach ($contacts as $c) {
+                $filteredContacts[$c['phone']] ??= $c;
+            }
+        } elseif ($selectedRegion === 'Hors France') {
+            $filteredContacts = array_filter($contacts, fn($c) => $isOutside($c['departement'] ?? ''));
+        } else {
+            $filteredContacts = array_filter($contacts, fn($c) => ($c['departement'] ?? '') === $selectedRegion);
+        }
         ?>
 
-        <div class="region-filter">
-          <ul class="nav__list" style="justify-content: flex-start;">
-            <li class="nav__item nav__item--has-sub">
-              <!-- Shows the current selection -->
-              <a class="nav__link nav__link__asso" href="#" aria-haspopup="true">
-                <?= $selectedRegion === 'all'
-                      ? 'Toutes les régions'
-                      : htmlspecialchars($selectedRegion, ENT_QUOTES, 'UTF-8') ?>
-              </a>
-
-              <ul class="subnav subnav__darkgreen">
-                <!-- Default option -->
-                <li class="subnav__item">
-                  <a class="subnav__link"
-                     href="?region=all"
-                     <?= $selectedRegion === 'all' ? 'aria-current="true"' : '' ?>>
-                    Toutes les régions
-                  </a>
-                </li>
-
-                <?php foreach ($regions as $regionName): ?>
-                  <li class="subnav__item">
-                    <a class="subnav__link"
-                       href="?region=<?= urlencode($regionName) ?>"
-                       <?= $selectedRegion === $regionName ? 'aria-current="true"' : '' ?>>
-                      <?= htmlspecialchars($regionName, ENT_QUOTES, 'UTF-8') ?>
-                    </a>
-                  </li>
-                <?php endforeach; ?>
-              </ul>
-            </li>
-          </ul>
+        <!-- ========== INTERACTIVE MAP ========== -->
+        <div class="france-map" id="france-map"
+             data-selected="<?= htmlspecialchars($selectedRegion, ENT_QUOTES, 'UTF-8') ?>"
+             data-available="<?= htmlspecialchars(json_encode(array_values($departement), JSON_UNESCAPED_UNICODE), ENT_QUOTES, 'UTF-8') ?>">
+          
+          <a class="nav__link nav__link__asso" href="?departement=all">Toutes les régions</a>
+          <?php include __DIR__ . '/carte-france.php'; ?>
+          
         </div>
+        
+        <script>
+        (function () {
+          const wrap = document.getElementById('france-map');
+          if (!wrap) return;
+
+          const selected = wrap.dataset.selected;
+          const available = JSON.parse(wrap.dataset.available);
+
+          // Iterate over every department path
+          wrap.querySelectorAll('path.departement').forEach(function (path) {
+            const name = path.dataset.nom;
+            if (!name) return;
+
+            // Mark empty departments visually (CSS handles the grey look)
+            if (!available.includes(name)) {
+              path.classList.add('is-empty');
+              path.setAttribute('tabindex', '-1');   // not focusable, not clickable
+              path.setAttribute('aria-hidden', 'true');
+              path.style.pointerEvents = 'none';      // clicks pass through, no hover state
+              return;
+            }
+
+            // Highlight the currently selected department
+            if (name === selected) path.classList.add('is-active');
+
+            // Make it focusable and announced as a link
+            path.setAttribute('tabindex', '0');
+            path.setAttribute('role', 'link');
+            path.setAttribute('aria-label', name);
+
+            // Navigate on click
+            const go = () => { window.location.search = '?departement=' + encodeURIComponent(name); };
+            path.addEventListener('click', go);
+            path.addEventListener('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+            });
+          });
+
+          wrap.style.touchAction = 'manipulation';
+        })();
+        </script>
 
         <div class="card-grid">
           <?php foreach ($filteredContacts as $contact): ?>
             <?php
               $name = $contact['name'] ?? '';
-              $region = $contact['region'] ?? '';
+              $departement = $contact['departement'] ?? '';
               $phone = $contact['phone'] ?? '';
               $image = $contact['img'] ?? '';
               $cleanPhone = preg_replace('/\s+/', '', $phone);
@@ -287,7 +311,7 @@
             <a class="card" href="tel:<?= htmlspecialchars($cleanPhone, ENT_QUOTES, 'UTF-8') ?>">
               <img class="card__img" src="<?= htmlspecialchars($image, ENT_QUOTES, 'UTF-8') ?>" alt="Photo de <?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>">
               <h3 class="card__title"><?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?></h3>
-              <p class="card__text id"><?= htmlspecialchars($region, ENT_QUOTES, 'UTF-8') ?></p>
+              <p class="card__text id"><?= htmlspecialchars($departement, ENT_QUOTES, 'UTF-8') ?></p>
               <p class="card__text id"><?= htmlspecialchars($phone, ENT_QUOTES, 'UTF-8') ?></p>
             </a>
           <?php endforeach; ?>
