@@ -1,0 +1,14 @@
+/* Fonds spécifiques de la page Nos actions */
+.actions-hero-bg {
+    background-image: url("../../img/nos-actions/backgroung-mains.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.actions-lines-bg {
+    background-image: url("../../img/nos-actions");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
